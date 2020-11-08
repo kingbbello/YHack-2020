@@ -2,7 +2,7 @@ const currentDomain = "https://8981fec6adee.ngrok.io"
 
 window.fbAsyncInit = function() {
   FB.init({
-    appId      : '{APP-ID}',
+    appId      : '{App-ID}',
     cookie     : true,
     xfbml      : true,
     version    : 'v8.0'
@@ -21,6 +21,7 @@ window.fbAsyncInit = function() {
 function checkLoginState() {
   FB.getLoginStatus(function(response) {
     if(response.status === "connected") {
+      localStorage.setItem("authToken" , response.authResponse.accessToken);
       window.location.replace(currentDomain + "/frontend/pages/mainScreen.html"); //Replace w/ link later
     };
   });
