@@ -9,7 +9,7 @@ app.use(cors());
 const port = 3000;
 
 app.get('/test',async function(req, res) {
-    console.log("Test")
+    console.log(req.body) // Prints out JSON passed in
 });
 
 app.listen(port, () => console.log(`Backend listening on port ${port}!`));

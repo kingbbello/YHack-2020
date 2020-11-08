@@ -1,3 +1,5 @@
+const currentDomain = "https://dba15a5f3002.ngrok.io"
+
 window.fbAsyncInit = function() {
   FB.init({
     appId      : '{APP-ID}',
@@ -19,7 +21,7 @@ window.fbAsyncInit = function() {
 function checkLoginState() {
   FB.getLoginStatus(function(response) {
     if(response.status === "connected") {
-      window.location.replace("https://dba15a5f3002.ngrok.io/frontend/pages/mainScreen.html"); //Replace w/ link later
+      window.location.replace(currentDomain + "/frontend/pages/mainScreen.html"); //Replace w/ link later
     };
   });
 }
