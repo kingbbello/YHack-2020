@@ -1,8 +1,8 @@
-const currentDomain = "https://8981fec6adee.ngrok.io"
+const currentDomain = "https://fabab29f1fa3.ngrok.io"
 
 window.fbAsyncInit = function() {
   FB.init({
-    appId      : '{App-ID}',
+    appId      : '{APP-ID}',
     cookie     : true,
     xfbml      : true,
     version    : 'v8.0'
