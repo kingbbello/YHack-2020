@@ -1,4 +1,4 @@
-const currentDomain = "https://fabab29f1fa3.ngrok.io"
+const currentDomain = "http://localhost:5500"
 
 window.fbAsyncInit = function() {
   FB.init({
@@ -20,9 +20,10 @@ window.fbAsyncInit = function() {
 
 function checkLoginState() {
   FB.getLoginStatus(function(response) {
+    window.location.replace(currentDomain + "/frontend/pages/opinionSelection.html");
     if(response.status === "connected") {
       localStorage.setItem("authToken" , response.authResponse.accessToken);
-      window.location.replace(currentDomain + "/frontend/pages/mainScreen.html"); //Replace w/ link later
+      window.location.replace(currentDomain + "/frontend/pages/opinionSelection.html"); //Replace w/ link later
     };
   });
 }

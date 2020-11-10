@@ -1,28 +1,27 @@
 <!doctype html>
-
 <html lang="en">
 <head>
   <meta charset="utf-8">
-
-  <title>The HTML5 Herald</title>
-  <meta name="description" content="The HTML5 Herald">
-  <meta name="author" content="SitePoint">
-
+  <title>Angry Pen Pal</title>
   <link rel="stylesheet" href="../styles/loginService.css">
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@900&display=swap" rel="stylesheet">
 </head>
-
 <body>
   <script src = "../services/loginService.js"></script>
-  <fb:login-button 
-    scope="public_profile,email"
-    onlogin="checkLoginState();"
-    class="fb-login-button" 
-    data-size="large" 
-    data-button-type="continue_with" 
-    data-layout="rounded" 
-    data-auto-logout-link="false" 
-    data-use-continue-as="false" 
-    data-width="">
-  </fb:login-button>
+  <div>
+    <fb:login-button 
+      id = "loginButton"
+      scope="public_profile,email"
+      onlogin="checkLoginState();"
+      class="fb-login-button" 
+      data-size="large" 
+      data-button-type="continue_with" 
+      data-layout="rounded" 
+      data-auto-logout-link="false" 
+      data-use-continue-as="false" 
+      data-width="">
+    </fb:login-button>
+    <h1 id = "appTitle"> Angry Pen Pal</h1>
+  </div>
 </body>
 </html>
